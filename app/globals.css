@@ -2,3 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+  color: #fff;
+  background: linear-gradient(
+      to bottom,
+      #2a2929,
+      #191818
+  );
+    
+}
