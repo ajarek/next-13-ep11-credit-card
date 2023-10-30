@@ -28,18 +28,25 @@ const CreditCard = () => {
       <Image
        className="absolute"
        alt="mastercard"
-       src="/mastercard.svg"
+       src="/visa.svg"
        width={70}
        height={24}
       />
        <Image
-            className="absolute right-8 bottom-0 top-0 my-auto"
-            alt="chip"
-            src="/chip.svg"
+            className="absolute right-8  top-6 my-auto "
+            alt="wifi"
+            src="/wifi.svg"
             width={60}
             height={30}
           />
-          <div className="flex flex-col w-full h-full justify-end gap-4">
+       <Image
+            className="absolute right-8 bottom-0 top-0 my-auto bg-yellow-600 rounded-xl shadow-lg"
+            alt="chip"
+            src="/chip-1.svg"
+            width={60}
+            height={30}
+          />
+          <div className="flex flex-col w-full h-full justify-end gap-4" style={{textShadow:'-1px -1px 0px rgba(255,255,255,0.3), 1px 1px 0px rgba(0,0,0,0.8)'}}>
             <p className="text-2xl">4242 4242 4242 4242</p>
             <div className="flex gap-28">
               <p className="text-lg uppercase">John Doe</p>
