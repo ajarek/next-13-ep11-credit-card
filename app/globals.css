@@ -4,10 +4,16 @@
 
 body {
   color: #fff;
-  background: linear-gradient(
-      to bottom,
+  background: linear-gradient(to bottom,
       #2a2929,
-      #191818
-  );
-    
+      #191818);
+
+}
+
+.container {
+  @apply w-[320px] flex flex-col;
+
+}
+input,select{
+  @apply h-10 px-2 rounded-sm text-slate-900 text-lg;
 }
