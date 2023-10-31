@@ -11,7 +11,7 @@ body {
 }
 
 .container {
-  @apply w-[320px] flex flex-col;
+  @apply w-[320px] flex flex-col max-sm:w-[300px]; 
 
 }
 input,select{

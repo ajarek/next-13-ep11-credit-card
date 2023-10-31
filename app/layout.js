@@ -1,6 +1,7 @@
 import { Inter } from 'next/font/google'
 import './globals.css'
 import Link from 'next/link'
+import { PersonContextProvider } from '@/context/PersonContext'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -13,11 +14,13 @@ export default function RootLayout({ children }) {
   return (
     <html lang='en'>
       <body className={inter.className}>
-        <nav className='fixed top-0 left-0 right-0 h-20 flex justify-evenly items-center text-2xl border-b'>
-          <Link href={'/'}> Karta</Link>
-          <Link href={'/person'}>Kreator Kart</Link>
-        </nav>
-        {children}
+        <PersonContextProvider>
+          <nav className='fixed top-0 left-0 right-0 h-20 flex justify-evenly items-center text-2xl border-b'>
+            <Link href={'/'}> Karta</Link>
+            <Link href={'/person'}>Kreator Kart</Link>
+          </nav>
+          {children}
+        </PersonContextProvider>
       </body>
     </html>
   )

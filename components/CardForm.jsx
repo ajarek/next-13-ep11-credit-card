@@ -29,6 +29,7 @@ const CardForm = ({handleSubmit}) => {
       <input
         type='text'
         placeholder='4242 4242 4242 4242'
+        pattern='^(?:\d{4} ){3}\d{4}$'
         required
       
       />
@@ -37,8 +38,8 @@ const CardForm = ({handleSubmit}) => {
       <label htmlFor='message'>Data ważności</label>
       <input
         type='text'
-    
-        placeholder='10/24'
+        placeholder='10/2024'
+        pattern='^(0[1-9]|1[0-2])\/20[2-9][0-9]$'
         required
       />
     </div>
