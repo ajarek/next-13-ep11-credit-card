@@ -6,30 +6,29 @@ import React, { useContext } from 'react'
 import { PersonContext } from '@/context/PersonContext'
 
 const Person = () => {
-
-  const { person, setPerson } = useContext(PersonContext)
+  const { setPerson } = useContext(PersonContext)
   const router = useRouter()
-  
+
   const handleSubmit = async (e) => {
     e.preventDefault()
-    const newPerson={
-     publisher:e.target[0].value, 
-     fullName:e.target[1].value ,
-     number:e.target[2].value, 
-     expiration :e.target[3].value 
-    };
+    const newPerson = {
+      publisher: e.target[0].value,
+      fullName: e.target[1].value,
+      number: e.target[2].value,
+      expiration: e.target[3].value,
+    }
     setPerson(newPerson)
-    e.target[0].value='', 
-    e.target[1].value='',
-    e.target[2].value='', 
-    e.target[3].value='' 
-     
+    ;(e.target[0].value = ''),
+      (e.target[1].value = ''),
+      (e.target[2].value = ''),
+      (e.target[3].value = '')
+
     router.push('/')
   }
-  
+
   return (
-    <div className="flex min-h-screen flex-col items-center justify-center p-24 max-sm:p-4">
-      <CardForm handleSubmit={handleSubmit}/>
+    <div className='flex min-h-screen flex-col items-center justify-center p-24 max-sm:p-4'>
+      <CardForm handleSubmit={handleSubmit} />
     </div>
   )
 }

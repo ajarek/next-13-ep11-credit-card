@@ -11,9 +11,11 @@ body {
 }
 
 .container {
-  @apply w-[320px] flex flex-col max-sm:w-[300px]; 
+  @apply w-[320px] flex flex-col max-sm:w-[300px];
 
 }
-input,select{
+
+input,
+select {
   @apply h-10 px-2 rounded-sm text-slate-900 text-lg;
 }
